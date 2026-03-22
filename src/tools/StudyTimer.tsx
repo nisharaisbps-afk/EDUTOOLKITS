@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'motion/react';
 import { Play, Pause, RotateCcw, Coffee, BookOpen } from 'lucide-react';
+import { ToolLayout } from '../components/ToolLayout';
 import { AdPlaceholder } from '../components/AdPlaceholder';
 
 export const StudyTimer = () => {
@@ -60,14 +61,10 @@ export const StudyTimer = () => {
     : (timeLeft / (25 * 60)) * 100;
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-black text-slate-900 mb-4">Pomodoro Study Timer</h1>
-        <p className="text-slate-600">Boost your focus with 25-minute study sessions and 5-minute breaks.</p>
-      </div>
-
-      <AdPlaceholder className="mb-8" />
-
+    <ToolLayout 
+      title="Pomodoro Study Timer" 
+      description="Boost your focus with 25-minute study sessions and 5-minute breaks."
+    >
       <div className="bg-white rounded-[3rem] p-12 shadow-sm border border-slate-100 text-center relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-2 bg-slate-100">
           <motion.div 
@@ -109,9 +106,11 @@ export const StudyTimer = () => {
             <RotateCcw className="w-10 h-10" />
           </button>
         </div>
-      </div>
 
-      <AdPlaceholder className="mt-12" />
-    </div>
+        <div className="mt-12 flex justify-center">
+          <AdPlaceholder format="skyscraper" label="Adsterra Banner Ad" />
+        </div>
+      </div>
+    </ToolLayout>
   );
 };

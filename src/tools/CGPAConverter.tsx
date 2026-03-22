@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { GraduationCap, RefreshCw } from 'lucide-react';
-import { AdPlaceholder } from '../components/AdPlaceholder';
+import { ToolLayout } from '../components/ToolLayout';
 
 export const CGPAConverter = () => {
   const [cgpa, setCgpa] = useState('');
@@ -15,14 +15,10 @@ export const CGPAConverter = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-black text-slate-900 mb-4">CGPA to Percentage Converter</h1>
-        <p className="text-slate-600">Convert your CGPA to percentage based on the Indian CBSE/University system.</p>
-      </div>
-
-      <AdPlaceholder className="mb-8" />
-
+    <ToolLayout 
+      title="CGPA to Percentage Converter" 
+      description="Convert your CGPA to percentage based on the Indian CBSE/University system."
+    >
       <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-100 mb-8">
         <div className="max-w-md mx-auto space-y-6">
           <div>
@@ -63,8 +59,6 @@ export const CGPAConverter = () => {
           <div className="text-6xl font-black text-indigo-700">{result}%</div>
         </motion.div>
       )}
-
-      <AdPlaceholder className="mt-12" />
-    </div>
+    </ToolLayout>
   );
 };

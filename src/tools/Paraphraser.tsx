@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { RefreshCw, Copy, Check, Loader2 } from 'lucide-react';
 import { paraphraseText } from '../lib/aiService';
-import { AdPlaceholder } from '../components/AdPlaceholder';
+import { ToolLayout } from '../components/ToolLayout';
 
 export const Paraphraser = () => {
   const [input, setInput] = useState('');
@@ -32,14 +32,10 @@ export const Paraphraser = () => {
   };
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-12">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-black text-slate-900 mb-4">AI Paraphrasing Tool</h1>
-        <p className="text-slate-600">Rewrite your sentences and paragraphs instantly while keeping the meaning.</p>
-      </div>
-
-      <AdPlaceholder className="mb-8" />
-
+    <ToolLayout 
+      title="AI Paraphrasing Tool" 
+      description="Rewrite your sentences and paragraphs instantly while keeping the meaning."
+    >
       <div className="flex flex-wrap gap-2 mb-6">
         {['Simple', 'Formal', 'Creative', 'Academic', 'Short'].map((s) => (
           <button
@@ -92,8 +88,6 @@ export const Paraphraser = () => {
           </div>
         </div>
       </div>
-
-      <AdPlaceholder label="Adsterra Tool Page Banner" />
-    </div>
+    </ToolLayout>
   );
 };

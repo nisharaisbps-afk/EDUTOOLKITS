@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Calculator, Percent } from 'lucide-react';
-import { AdPlaceholder } from '../components/AdPlaceholder';
+import { ToolLayout } from '../components/ToolLayout';
 
 export const PercentageCalculator = () => {
   const [marks, setMarks] = useState('');
@@ -15,14 +15,10 @@ export const PercentageCalculator = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-black text-slate-900 mb-4">Percentage Calculator</h1>
-        <p className="text-slate-600">Quickly calculate your marks percentage or any other percentage value.</p>
-      </div>
-
-      <AdPlaceholder className="mb-8" />
-
+    <ToolLayout 
+      title="Percentage Calculator" 
+      description="Quickly calculate your marks percentage or any other percentage value."
+    >
       <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-100 mb-8">
         <div className="max-w-md mx-auto space-y-6">
           <div className="grid grid-cols-1 gap-6">
@@ -69,8 +65,6 @@ export const PercentageCalculator = () => {
           <div className="text-6xl font-black text-emerald-700">{result}%</div>
         </motion.div>
       )}
-
-      <AdPlaceholder className="mt-12" />
-    </div>
+    </ToolLayout>
   );
 };

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { FileText, Trash2, Copy, Check } from 'lucide-react';
-import { AdPlaceholder } from '../components/AdPlaceholder';
+import { ToolLayout } from '../components/ToolLayout';
 
 export const WordCounter = () => {
   const [text, setText] = useState('');
@@ -29,14 +29,10 @@ export const WordCounter = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-black text-slate-900 mb-4">Free Online Word Counter</h1>
-        <p className="text-slate-600">Count words, characters, sentences, and paragraphs in real-time.</p>
-      </div>
-
-      <AdPlaceholder className="mb-8" />
-
+    <ToolLayout 
+      title="Free Online Word Counter" 
+      description="Count words, characters, sentences, and paragraphs in real-time."
+    >
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
         {[
           { label: 'Words', value: stats.words, color: 'text-blue-600' },
@@ -78,8 +74,6 @@ export const WordCounter = () => {
           className="w-full h-80 px-6 py-6 rounded-2xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all resize-none text-slate-700 leading-relaxed"
         />
       </div>
-
-      <AdPlaceholder className="mt-8" label="Adsterra Bottom Banner" />
-    </div>
+    </ToolLayout>
   );
 };

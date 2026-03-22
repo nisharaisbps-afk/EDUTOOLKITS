@@ -76,38 +76,40 @@ export const Home = () => {
   return (
     <div className="pb-20">
       {/* Hero Section */}
-      <section className="relative pt-20 pb-32 overflow-hidden">
+      <section className="relative pt-24 pb-32 overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-blue-50 via-transparent to-transparent opacity-70"></div>
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-indigo-400/20 blur-[120px] rounded-full"></div>
+          <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-rose-400/20 blur-[120px] rounded-full"></div>
+          <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-emerald-400/20 blur-[120px] rounded-full"></div>
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            <span className="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider mb-6">
+            <span className="inline-block py-2 px-4 rounded-full bg-gradient-to-r from-indigo-500 to-rose-500 text-white text-xs font-black uppercase tracking-widest mb-8 shadow-lg shadow-indigo-200">
               The Ultimate Student Toolkit
             </span>
-            <h1 className="text-5xl md:text-7xl font-black text-slate-900 mb-6 tracking-tight leading-tight">
+            <h1 className="text-6xl md:text-8xl font-black text-slate-900 mb-8 tracking-tight leading-[0.9]">
               All Student Tools in <br />
-              <span className="text-blue-600">One Place</span>
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-rose-500 to-emerald-500">One Place</span>
             </h1>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-10">
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-12 font-medium">
               Free, Fast & Easy Tools designed to help students excel in writing, 
               calculations, and time management.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <a 
                 href="#tools"
-                className="w-full sm:w-auto bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-blue-700 transition-all shadow-xl shadow-blue-200 flex items-center justify-center gap-2"
+                className="w-full sm:w-auto bg-indigo-600 text-white px-10 py-5 rounded-3xl font-black text-lg hover:bg-indigo-700 transition-all shadow-2xl shadow-indigo-200 flex items-center justify-center gap-3 hover:scale-105 active:scale-95"
               >
-                Explore Tools <ArrowRight className="w-5 h-5" />
+                Explore Tools <ArrowRight className="w-6 h-6" />
               </a>
               <a 
                 href="#features"
-                className="w-full sm:w-auto bg-white text-slate-900 px-8 py-4 rounded-2xl font-bold text-lg border border-slate-200 hover:bg-slate-50 transition-all flex items-center justify-center"
+                className="w-full sm:w-auto bg-white/80 backdrop-blur-md text-slate-900 px-10 py-5 rounded-3xl font-black text-lg border border-white shadow-xl hover:bg-white transition-all flex items-center justify-center hover:scale-105 active:scale-95"
               >
                 Learn More
               </a>
@@ -117,8 +119,12 @@ export const Home = () => {
       </section>
 
       {/* Ad Section */}
-      <div className="max-w-7xl mx-auto px-4 mb-20">
-        <AdPlaceholder label="Adsterra Homepage Banner" />
+      <div className="max-w-7xl mx-auto px-4 mb-24">
+        <div className="p-1 bg-gradient-to-r from-indigo-500 via-rose-500 to-emerald-500 rounded-[2rem] shadow-2xl">
+          <div className="bg-white rounded-[1.8rem] overflow-hidden">
+            <AdPlaceholder label="Adsterra Homepage Banner" />
+          </div>
+        </div>
       </div>
 
       {/* Tools Section */}
@@ -165,7 +171,7 @@ export const Home = () => {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-white mb-6">Why Choose StudentTools Hub?</h2>
+            <h2 className="text-3xl md:text-5xl font-black text-white mb-6">Why Choose EduToolkits?</h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
               We build tools that actually work. No fluff, just pure utility for your academic journey.
             </p>

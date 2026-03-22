@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Calendar, RefreshCw } from 'lucide-react';
-import { AdPlaceholder } from '../components/AdPlaceholder';
+import { ToolLayout } from '../components/ToolLayout';
 
 export const AgeCalculator = () => {
   const [dob, setDob] = useState('');
@@ -35,14 +35,10 @@ export const AgeCalculator = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-black text-slate-900 mb-4">Free Age Calculator Online</h1>
-        <p className="text-slate-600">Calculate your exact age in years, months, and days instantly.</p>
-      </div>
-
-      <AdPlaceholder className="mb-8" />
-
+    <ToolLayout 
+      title="Free Age Calculator Online" 
+      description="Calculate your exact age in years, months, and days instantly."
+    >
       <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-100 mb-8">
         <div className="max-w-md mx-auto space-y-6">
           <div>
@@ -84,8 +80,6 @@ export const AgeCalculator = () => {
           ))}
         </motion.div>
       )}
-
-      <AdPlaceholder className="mt-12" label="Adsterra Bottom Banner" />
-    </div>
+    </ToolLayout>
   );
 };

@@ -43,7 +43,7 @@ export const UtilityTools = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-16">
+    <div className="max-w-7xl mx-auto px-4 py-16 relative">
       <div className="text-center mb-16">
         <h1 className="text-4xl font-black text-slate-900 mb-4">Utility Tools</h1>
         <p className="text-slate-600 max-w-2xl mx-auto">
