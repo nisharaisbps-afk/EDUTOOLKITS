@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { Menu, X, BookOpen, PenTool, Calculator, Clock, Layout } from 'lucide-react';
+import { Menu, X, BookOpen, PenTool, Calculator, Clock } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 export const Header = () => {
@@ -16,12 +16,12 @@ export const Header = () => {
     <header className="sticky top-0 z-50 bg-white/70 backdrop-blur-lg border-b border-white/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 relative flex items-center justify-center">
+          <Link to="/" className="flex items-center group">
+            <div className="h-16 relative flex items-center justify-center">
               <img 
                 src="https://storage.googleapis.com/static.ais.run/attachments/6qahvgjqu6xusmbdgbejxb/logo.png" 
                 alt="EduToolkits Logo" 
-                className="w-full h-full object-contain group-hover:rotate-12 transition-transform duration-300 relative z-10"
+                className="h-full w-auto object-contain group-hover:scale-105 transition-transform duration-300 relative z-10"
                 referrerPolicy="no-referrer"
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
@@ -32,13 +32,10 @@ export const Header = () => {
                   }
                 }}
               />
-              <div className="logo-fallback absolute inset-0 hidden items-center justify-center bg-gradient-to-br from-indigo-600 to-rose-500 rounded-xl shadow-lg">
-                <Layout className="w-6 h-6 text-white" />
+              <div className="logo-fallback absolute inset-0 hidden items-center justify-center bg-gradient-to-br from-indigo-600 to-rose-500 rounded-xl shadow-lg px-4 py-2">
+                <span className="text-white font-black text-xl">EduToolkits</span>
               </div>
             </div>
-            <span className="text-2xl font-black text-slate-900 tracking-tighter">
-              Edu<span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-rose-500">Toolkits</span>
-            </span>
           </Link>
 
           {/* Desktop Nav */}

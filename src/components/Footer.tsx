@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Github, Twitter, ExternalLink, Layout, User } from 'lucide-react';
+import { Mail, Github, Twitter, ExternalLink, User } from 'lucide-react';
 
 export const Footer = () => {
   return (
@@ -8,12 +8,12 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-16">
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 relative flex items-center justify-center">
+            <div className="flex items-center mb-8">
+              <div className="h-20 relative flex items-center justify-center">
                 <img 
                   src="https://storage.googleapis.com/static.ais.run/attachments/6qahvgjqu6xusmbdgbejxb/logo.png" 
                   alt="EduToolkits Logo" 
-                  className="w-full h-full object-contain relative z-10"
+                  className="h-full w-auto object-contain relative z-10"
                   referrerPolicy="no-referrer"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
@@ -24,13 +24,10 @@ export const Footer = () => {
                     }
                   }}
                 />
-                <div className="logo-fallback absolute inset-0 hidden items-center justify-center bg-gradient-to-br from-indigo-600 to-rose-500 rounded-xl shadow-lg">
-                  <Layout className="w-6 h-6 text-white" />
+                <div className="logo-fallback absolute inset-0 hidden items-center justify-center bg-gradient-to-br from-indigo-600 to-rose-500 rounded-xl shadow-lg px-4 py-2">
+                  <span className="text-white font-black text-2xl">EduToolkits</span>
                 </div>
               </div>
-              <span className="text-2xl font-black text-white tracking-tighter">
-                Edu<span className="text-indigo-500">Toolkits</span>
-              </span>
             </div>
             <p className="text-slate-400 max-w-md mb-8 text-lg leading-relaxed">
               Empowering students with a suite of professional tools for writing, calculations, and productivity. 
